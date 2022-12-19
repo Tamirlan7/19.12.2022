@@ -1,30 +1,45 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<template> 
+    <div id="main__block">
+      <TamirlanNavbarVue />
+      <router-view></router-view>
+    </div>
 </template>
 
+<script>
+  import TamirlanNavbarVue from './components/TamirlanNavbar.vue';
+
+  export default {
+    components: {
+      TamirlanNavbarVue,
+    }
+  }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-nav {
-  padding: 30px;
-}
+  body {
+    font-family: 'Montserrat', 'sans-serif';
+    overflow-x: hidden;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  button {
+    background-color: #fff;
+    color: teal;
+    border: 1px solid teal;
+    padding: 10px 30px;
+    font-family: 'Montserrat', 'sans-serif';
+  }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  button:hover {
+    transition: ease .5s;
+    background-color: teal;
+    color: #fff;
+    border: 1px solid lightblue;
+    box-shadow: 0 3px 4px 1px #000;    
+  }
 </style>
