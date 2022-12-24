@@ -16,7 +16,7 @@
                     </div>
                     <button style="margin: 10px;" @click="deleteProduct(product.id)">Удалить из корзины</button>
                     <button
-                    @click="this.$router.push({params: {id: product.id}, name: 'ProductDetails', query: {
+                    @click="this.$router.push({params: {id: product.id}, name: 'productDetails', query: {
                         name: product.name, 
                         img: product.img,
                         description: product.description,

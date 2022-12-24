@@ -11,7 +11,7 @@
             }}
         </h4>
         <button @click="this.$emit('busket', product)">Добавить в корзину</button>
-        <button @click="this.$router.push({params: {id: product.id}, name: 'ProductDetails', query: {
+        <button @click="this.$router.push({params: {id: product.id}, name: 'productDetails', query: {
                 name: product.name, 
                 img: product.img,
                 description: product.description,
